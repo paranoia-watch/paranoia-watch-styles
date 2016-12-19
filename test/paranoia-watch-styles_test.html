@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>paranoia-watch-styles test</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../paranoia-watch-styles.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <paranoia-watch-styles></paranoia-watch-styles>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('paranoia-watch-styles', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'paranoia-watch-styles');
+        });
+      });
+    </script>
+  </body>
+</html>

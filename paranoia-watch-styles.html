@@ -1,0 +1,249 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`paranoia-watch-styles`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="paranoia-watch-styles">
+  <template>
+    <style>
+
+      html, body {
+
+        --paranoia-color--red: rgba(255, 0, 80, 1);
+        --paranoia-color--darkgray: rgba(57, 57, 57, 1);
+        --paranoia-color--translucent-white: rgba(255, 255, 255, 0.7);
+
+        --paranoia-primary-font--base: {
+          font-family: 'News Cycle';
+        };
+
+        --paranoia-primary-font--title: {
+          @apply --paranoia-primary-font--base;
+          font-size: 130px;
+          font-weight: bold; 
+          line-height: 1;
+        }
+
+        --paranoia-primary-font--heading2: {
+          @apply --paranoia-primary-font--base;
+          font-size: 55px;
+          font-weight: bold;
+          text-transform: uppercase;
+          line-height: 1;
+        }
+
+        --paranoia-primary-font--heading3: {
+          @apply --paranoia-primary-font--base;
+          font-size: 22px;
+          font-weight: bold;
+          text-transform: uppercase;
+          line-height: 1;
+        }
+
+        --paranoia-primary-font--body: {
+          @apply --paranoia-primary-font--base;
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 1.25;
+        }
+
+        --paranoia-primary-font--small: {
+          @apply --paranoia-primary-font--base;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 1.25;
+        }
+
+        --paranoia-secondary-font--base: {
+          font-family: 'Patua One';
+          font-weight: 400;
+          line-height: 1.25;
+          text-transform: uppercase;
+        };
+
+        --paranoia-secondary-font--heading4: {
+          @apply --paranoia-secondary-font--base;
+          font-size: 17px;
+        }
+
+        --paranoia-secondary-font--heading6: {
+          @apply --paranoia-secondary-font--base;
+          font-size: 14px;
+        }
+
+        --paranoia-select-box-button: {
+          height: 66px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @apply --paranoia-primary-font--heading3;
+          background-color: transparent;
+          border: 0;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+          cursor: pointer;
+        }
+
+        --paranoia-radio-button: {
+          height: 43px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @apply --paranoia-primary-font--small;
+          background-color: transparent;
+          border: 0;
+          border-bottom: 2px solid var(--paranoia-color--darkgray);
+          cursor: pointer;
+        }
+
+        --paranoia-radio-button--selected: {
+          @apply --paranoia-radio-button;
+          border-bottom-color: var(--paranoia-color--red);
+        }
+
+        --paranoia-list: {
+          margin: 0;
+          padding: 0;
+        }
+
+        --paranoia-list-item: {
+          height: 66px;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          @apply --paranoia-primary-font--body;
+          color: var(--paranoia-color--red);
+          margin: 0;
+          padding: 0;
+          border-bottom: 1px solid var(--paranoia-color--red);
+        }
+
+      }
+
+      html > * {
+        box-sizing: border-box;
+        @apply --paranoia-primary-font--body;
+      }
+
+      html h1 {
+        @apply --paranoia-primary-font--title;
+      }
+
+      html h1.number:before {
+        color: var(--paranoia-color--darkgray);
+        content: attr(data-prefix);
+        font-weight: normal;
+        font-size: 120px;
+      }
+
+      html h1.number:after {
+        color: var(--paranoia-color--darkgray);
+        content: attr(data-suffix);
+        font-weight: normal;
+        font-size: 120px;
+      }
+
+      html h2 {
+        @apply --paranoia-primary-font--heading2;
+      }
+
+      html h2.number:before {
+        color: var(--paranoia-color--darkgray);
+        content: attr(data-prefix);
+        font-weight: normal;
+        font-size: 30px;
+      }
+
+      html h2.number:after {
+        color: var(--paranoia-color--darkgray);
+        content: attr(data-suffix);
+        font-weight: normal;
+        font-size: 30px;
+      }
+
+      html h3 {
+        @apply --paranoia-primary-font--heading3;
+      }
+
+      html article.small {
+        @apply --paranoia-primary-font--small;
+      }
+
+      html h4.alt {
+        @apply --paranoia-secondary-font--heading4;
+      }
+
+      html h6.alt {
+        @apply --paranoia-secondary-font--heading6;
+      }
+
+      html button.select-button {
+        @apply --paranoia-select-box-button;
+      }
+
+      html button.select-button:after {
+        background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB2aWV3Qm94PSIzODAgMTQ1IDE5IDEyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gc3Ryb2tlPSJub25lIiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM4OS4wMDAwMDAsIDE1MS40NTAwMDApIHJvdGF0ZSg5MC4wMDAwMDApIHRyYW5zbGF0ZSgtMzg5LjAwMDAwMCwgLTE1MS40NTAwMDApICIgcG9pbnRzPSIzODMuNDUgMTQ0LjU1IDM4NS41NSAxNDIuNDUgMzk0LjU1IDE1MS40NSAzODUuNTUgMTYwLjQ1IDM4My40NSAxNTguMzUgMzkwLjM1IDE1MS40NSI+PC9wb2x5Z29uPiA8L3N2Zz4=');
+        content: '';
+        width: 19px;
+        height: 12px;
+        margin-left: 9px;
+      }
+
+      html button.radio-button {
+        @apply --paranoia-radio-button;
+      }
+
+      html button.radio-button.selected {
+        @apply --paranoia-radio-button--selected;
+      }
+
+      html ul, html ol {
+        @apply --paranoia-list;
+        counter-reset: list-counter;
+      }
+
+      html ul li, html ol li {
+        @apply --paranoia-list-item;
+        display: flex;
+        position: relative;
+      }
+
+      html ol li::before {
+        flex: none;
+        content: counter(list-counter);
+        counter-increment: list-counter;
+        width: 42px;
+        height: 42px;
+        background-color: var(--paranoia-color--red);
+        color: black;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 18px;
+        @apply --paranoia-secondary-font--heading4;
+      }
+
+      html ul li::after, html ol li::after {
+        content: attr(data-suffix);
+        text-align: right;
+        position: absolute;
+        right: 0;
+      }
+
+    </style>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'paranoia-watch-styles'
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>paranoia-watch-styles demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../paranoia-watch-styles.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles"></style>
+    <style is="custom-style" include="paranoia-watch-styles"></style>
+
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      
+      <h3>Large Number</h3>
+      <demo-snippet>
+        <template>
+          <h1 class="number" data-prefix="+" data-suffix="%">304</h1>
+        </template>
+      </demo-snippet>
+
+      <h3>h2</h3>
+      <demo-snippet>
+        <template>
+          <h2 class="number" data-prefix="+" data-suffix="%">304</h2>
+        </template>
+      </demo-snippet>
+
+      <h3>h3</h3>
+      <demo-snippet>
+        <template>
+          <h3>Last week growth</h3>
+        </template>
+      </demo-snippet>
+
+      <h3>Body Font Demo</h3>
+      <demo-snippet>
+        <template>
+          <article>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</article>
+        </template>
+      </demo-snippet>
+
+      <h3>Small Font Demo</h3>
+      <demo-snippet>
+        <template>
+          <article class="small">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</article>
+        </template>
+      </demo-snippet>
+
+      <h3>h4 Alt</h3>
+      <demo-snippet>
+        <template>
+          <h4 class="alt">Paranoia Last Month</h4>
+        </template>
+      </demo-snippet>
+
+      <h3>h6 Alt</h3>
+      <demo-snippet>
+        <template>
+          <h6 class="alt">Paranoia Last Month</h6>
+        </template>
+      </demo-snippet>
+
+      <h3>Select Button</h3>
+      <demo-snippet>
+        <template>
+          <button class="select-button">Amsterdam</button>
+        </template>
+      </demo-snippet>
+
+      <h3>Radio Button</h3>
+      <demo-snippet>
+        <template>
+          <button class="radio-button">Amsterdam</button>
+          <button class="radio-button selected">Amsterdam</button>
+        </template>
+      </demo-snippet>
+
+      <h3>Unordered List</h3>
+      <demo-snippet>
+        <template>
+          <ul>
+            <li>@JohnDoe</li>
+            <li>@FooBar</li>
+            <li>@BazBaa</li>
+          </ul>
+        </template>
+      </demo-snippet>
+
+      <h3>Ordered List</h3>
+      <demo-snippet>
+        <template>
+          <ol>
+            <li data-suffix="1.4 seats">@PVV</li>
+            <li data-suffix="0.9 seats">@Groenlinks</li>
+            <li data-suffix="-0.6 seats">@VVD</li>
+          </ol>
+        </template>
+      </demo-snippet>
+
+    </div>
+  </body>
+</html>
