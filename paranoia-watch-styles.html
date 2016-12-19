@@ -4,14 +4,14 @@
 `paranoia-watch-styles`
 
 
-@demo demo/index.html 
+@demo demo/index.
 -->
 
 <dom-module id="paranoia-watch-styles">
   <template>
     <style>
 
-      html, body {
+      :host {
 
         --paranoia-color--red: rgba(255, 0, 80, 1);
         --paranoia-color--darkgray: rgba(57, 57, 57, 1);
@@ -127,68 +127,68 @@
 
       }
 
-      html > * {
+      > * {
         box-sizing: border-box;
         @apply --paranoia-primary-font--body;
       }
 
-      html h1 {
+      h1 {
         @apply --paranoia-primary-font--title;
       }
 
-      html h1.number:before {
+      h1.number:before {
         color: var(--paranoia-color--darkgray);
         content: attr(data-prefix);
         font-weight: normal;
         font-size: 120px;
       }
 
-      html h1.number:after {
+      h1.number:after {
         color: var(--paranoia-color--darkgray);
         content: attr(data-suffix);
         font-weight: normal;
         font-size: 120px;
       }
 
-      html h2 {
+      h2 {
         @apply --paranoia-primary-font--heading2;
       }
 
-      html h2.number:before {
+      h2.number:before {
         color: var(--paranoia-color--darkgray);
         content: attr(data-prefix);
         font-weight: normal;
         font-size: 30px;
       }
 
-      html h2.number:after {
+      h2.number:after {
         color: var(--paranoia-color--darkgray);
         content: attr(data-suffix);
         font-weight: normal;
         font-size: 30px;
       }
 
-      html h3 {
+      h3 {
         @apply --paranoia-primary-font--heading3;
       }
 
-      html article.small {
+      article.small {
         @apply --paranoia-primary-font--small;
       }
 
-      html h4.alt {
+      h4.alt {
         @apply --paranoia-secondary-font--heading4;
       }
 
-      html h6.alt {
+      h6.alt {
         @apply --paranoia-secondary-font--heading6;
       }
 
-      html button.select-button {
+      button.select-button {
         @apply --paranoia-select-box-button;
       }
 
-      html button.select-button:after {
+      button.select-button:after {
         background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB2aWV3Qm94PSIzODAgMTQ1IDE5IDEyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gc3Ryb2tlPSJub25lIiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM4OS4wMDAwMDAsIDE1MS40NTAwMDApIHJvdGF0ZSg5MC4wMDAwMDApIHRyYW5zbGF0ZSgtMzg5LjAwMDAwMCwgLTE1MS40NTAwMDApICIgcG9pbnRzPSIzODMuNDUgMTQ0LjU1IDM4NS41NSAxNDIuNDUgMzk0LjU1IDE1MS40NSAzODUuNTUgMTYwLjQ1IDM4My40NSAxNTguMzUgMzkwLjM1IDE1MS40NSI+PC9wb2x5Z29uPiA8L3N2Zz4=');
         content: '';
         width: 19px;
@@ -196,26 +196,26 @@
         margin-left: 9px;
       }
 
-      html button.radio-button {
+      button.radio-button {
         @apply --paranoia-radio-button;
       }
 
-      html button.radio-button.selected {
+      button.radio-button.selected {
         @apply --paranoia-radio-button--selected;
       }
 
-      html ul, html ol {
+      ul, ol {
         @apply --paranoia-list;
         counter-reset: list-counter;
       }
 
-      html ul li, html ol li {
+      ul li, ol li {
         @apply --paranoia-list-item;
         display: flex;
         position: relative;
       }
 
-      html ol li::before {
+      ol li::before {
         flex: none;
         content: counter(list-counter);
         counter-increment: list-counter;
@@ -231,7 +231,7 @@
         @apply --paranoia-secondary-font--heading4;
       }
 
-      html ul li::after, html ol li::after {
+      ul li::after, ol li::after {
         content: attr(data-suffix);
         text-align: right;
         position: absolute;
